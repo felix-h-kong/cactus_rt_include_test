@@ -1,14 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 project(cactus-rt-include-test)
 
-# # add_compile_definitions(CACTUS_RT_TRACING_ENABLED=1)
-# set(ENABLE_TRACING ON CACHE BOOL "Enable tracing in cactus_rt" FORCE)
+set(CACTUS_RT_ENABLE_TRACING ON CACHE BOOL "Enable tracing in cactus_rt" FORCE)
 
 include(FetchContent)
 FetchContent_Declare(
   cactus_rt
   GIT_REPOSITORY https://github.com/cactusdynamics/cactus-rt.git
-  GIT_TAG        ...
+  GIT_TAG        65572dd2a305a959b64ef34978dbc1cb3e4135ba
 )
 FetchContent_MakeAvailable(cactus_rt)
 
